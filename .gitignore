@@ -1,0 +1,16 @@
+# secrets
+.env
+
+# the sample pack and the brief are confidential, never commit them
+data/
+EsMagico*.pdf
+
+# eval details hold expected-versus-got values from the confidential pack (the aggregate results/*.json do not)
+results/details/
+
+# python / tooling
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.claude/

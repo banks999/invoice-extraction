@@ -1,0 +1,21 @@
+model qwen/qwen3.8-27b, prompt extract_v3.md (predictions generated with it, then scored from files), 8 labelled documents (scored existing predictions)
+
+field                          correct   of  accuracy
+is_invoice                           7    8     87.5%
+vendor                               4    8     50.0%
+invoice_number                       0    8      0.0%
+invoice_date                         0    8      0.0%
+currency                             5    8     62.5%
+line_items (all rows right)          0    8      0.0%
+tax_total                            0    8      0.0%
+total                                0    8      0.0%
+whole document exact                 0    8      0.0%
+
+line items, item level: precision 0.0% (0/36 predicted rows right), recall 0.0% (0/42 expected rows found)
+flagged needs_review: 7 of 8
+
+review flags: 8 of 8 documents have at least one wrong field
+  flagged by a failed check: 4 documents, 4 of the 8 wrong ones, 0 false alarms
+  flagged by the model's own doubt: 6 documents, 6 of the 8 wrong ones, 0 false alarms
+  flagged by either: 6 documents, 6 of the 8 wrong ones, 0 false alarms
+  field level: the model doubted 22 fields and 22 of them really were wrong; it doubted 22 of the 48 wrong fields

@@ -1,0 +1,228 @@
+{
+  "run": "20261124-154305",
+  "mode": "scored existing predictions",
+  "model": "qwen/qwen3.8-27b",
+  "prompt": "extract_v3.md (predictions generated with it, then scored from files)",
+  "documents": 8,
+  "accuracy": {
+    "is_invoice": {
+      "correct": 7,
+      "total": 8,
+      "accuracy": 0.875
+    },
+    "vendor": {
+      "correct": 4,
+      "total": 8,
+      "accuracy": 0.5
+    },
+    "invoice_number": {
+      "correct": 0,
+      "total": 8,
+      "accuracy": 0.0
+    },
+    "invoice_date": {
+      "correct": 0,
+      "total": 8,
+      "accuracy": 0.0
+    },
+    "currency": {
+      "correct": 5,
+      "total": 8,
+      "accuracy": 0.625
+    },
+    "line_items": {
+      "correct": 0,
+      "total": 8,
+      "accuracy": 0.0
+    },
+    "tax_total": {
+      "correct": 0,
+      "total": 8,
+      "accuracy": 0.0
+    },
+    "total": {
+      "correct": 0,
+      "total": 8,
+      "accuracy": 0.0
+    },
+    "document_exact_match": {
+      "correct": 0,
+      "total": 8,
+      "accuracy": 0.0
+    }
+  },
+  "line_items_item_level": {
+    "matched": 0,
+    "predicted": 36,
+    "expected": 42,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "usage": null,
+  "per_document": {
+    "L01": {
+      "exact": false,
+      "fields": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": false,
+        "invoice_date": false,
+        "currency": true,
+        "line_items": false,
+        "tax_total": false,
+        "total": false
+      },
+      "needs_review": true,
+      "error": null,
+      "failed_checks": 0,
+      "unsure": [
+        "invoice_number",
+        "line_items",
+        "tax_total",
+        "total"
+      ]
+    },
+    "L02": {
+      "exact": false,
+      "fields": {
+        "is_invoice": true,
+        "vendor": false,
+        "invoice_number": false,
+        "invoice_date": false,
+        "currency": true,
+        "line_items": false,
+        "tax_total": false,
+        "total": false
+      },
+      "needs_review": true,
+      "error": null,
+      "failed_checks": 1,
+      "unsure": [
+        "vendor",
+        "invoice_number",
+        "invoice_date",
+        "line_items",
+        "tax_total",
+        "total"
+      ]
+    },
+    "L03": {
+      "exact": false,
+      "fields": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": false,
+        "invoice_date": false,
+        "currency": true,
+        "line_items": false,
+        "tax_total": false,
+        "total": false
+      },
+      "needs_review": true,
+      "error": null,
+      "failed_checks": 1,
+      "unsure": [
+        "line_items",
+        "tax_total"
+      ]
+    },
+    "L05": {
+      "exact": false,
+      "fields": {
+        "is_invoice": true,
+        "vendor": false,
+        "invoice_number": false,
+        "invoice_date": false,
+        "currency": false,
+        "line_items": false,
+        "tax_total": false,
+        "total": false
+      },
+      "needs_review": false,
+      "error": null,
+      "failed_checks": 0,
+      "unsure": []
+    },
+    "L06": {
+      "exact": false,
+      "fields": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": false,
+        "invoice_date": false,
+        "currency": true,
+        "line_items": false,
+        "tax_total": false,
+        "total": false
+      },
+      "needs_review": true,
+      "error": null,
+      "failed_checks": 1,
+      "unsure": [
+        "line_items",
+        "tax_total",
+        "total"
+      ]
+    },
+    "L07": {
+      "exact": false,
+      "fields": {
+        "is_invoice": true,
+        "vendor": true,
+        "invoice_number": false,
+        "invoice_date": false,
+        "currency": true,
+        "line_items": false,
+        "tax_total": false,
+        "total": false
+      },
+      "needs_review": true,
+      "error": null,
+      "failed_checks": 0,
+      "unsure": [
+        "line_items",
+        "tax_total",
+        "total"
+      ]
+    },
+    "L09": {
+      "exact": false,
+      "fields": {
+        "is_invoice": true,
+        "vendor": false,
+        "invoice_number": false,
+        "invoice_date": false,
+        "currency": false,
+        "line_items": false,
+        "tax_total": false,
+        "total": false
+      },
+      "needs_review": true,
+      "error": null,
+      "failed_checks": 1,
+      "unsure": [
+        "invoice_date",
+        "line_items",
+        "tax_total",
+        "total"
+      ]
+    },
+    "L10": {
+      "exact": false,
+      "fields": {
+        "is_invoice": false,
+        "vendor": false,
+        "invoice_number": false,
+        "invoice_date": false,
+        "currency": false,
+        "line_items": false,
+        "tax_total": false,
+        "total": false
+      },
+      "needs_review": true,
+      "error": "no_valid_json",
+      "failed_checks": 0,
+      "unsure": []
+    }
+  }
+}

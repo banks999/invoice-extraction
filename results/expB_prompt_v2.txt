@@ -1,0 +1,16 @@
+model qwen/qwen3.8-27b, prompt extract_v2.md, 10 labelled documents (ran the model)
+
+field                          correct   of  accuracy
+is_invoice                           9   10     90.0%
+vendor                               9   10     90.0%
+invoice_number                       9   10     90.0%
+invoice_date                         9   10     90.0%
+currency                             9   10     90.0%
+line_items (all rows right)          9   10     90.0%
+tax_total                            9   10     90.0%
+total                                9   10     90.0%
+whole document exact                 9   10     90.0%
+
+line items, item level: precision 100.0% (62/62 predicted rows right), recall 93.9% (62/66 expected rows found)
+flagged needs_review: 1 of 10
+model calls: 9 (0 retries), tokens in/out 24807/3833, list-price cost $0.0352
